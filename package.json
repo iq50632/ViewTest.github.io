@@ -13,5 +13,7 @@
     "nuxt": "^2.15.7",
     "view-design": "^4.6.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "push-dir": "^0.4.1"
+  }
 }
