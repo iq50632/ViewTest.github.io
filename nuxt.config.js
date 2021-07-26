@@ -47,6 +47,6 @@ export default {
   build: {
   },
   generate: {
-    dir: 'does'
+    dir: 'dist'
   }
 }
