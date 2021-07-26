@@ -1,6 +1,7 @@
 {
   "name": "viewuitest",
   "version": "1.0.0",
+  "main": "index.js",
   "private": false,
   "scripts": {
     "dev": "nuxt",
