@@ -1,8 +1,9 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
-  router: {
-    base: '/<repository_name>/'
-  }
-} : {}
+const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
+    ? { router: {
+          base: '/<repository-name>/'
+        }
+      }
+    : {}
 
 const config = require('./firebase.config.js')
 
