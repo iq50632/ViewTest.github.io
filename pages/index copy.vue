@@ -1,16 +1,18 @@
 <template>
-  <Row>
-    <Col span='5'>
-    {{person.length}}
-    </Col>
-    <Col span='19'>
-    <Tabs value="name1" style="width:100%">
-      <TabPane label="群組聊天室" name="group">群組聊天室的内容</TabPane>
-      <TabPane v-for="i in person" :key="i.id" :label="i.name" :name="i.name">标签二的内容</TabPane>
-    </Tabs>
-    </Col>
-    <Button type="info" ghost>Info</Button>
-  </Row>
+  <div class="container">
+    <Row>
+      <Col span='8'>
+      {{person.length}}
+      </Col>
+      <Col span='16'>
+      <Tabs value="name1" style="width:100%">
+        <TabPane :label="label" name="name1">群組聊天室的内容</TabPane>
+        <TabPane v-for="i in person" :key="i.id" :label="i.name" name="name2">标签二的内容</TabPane>
+      </Tabs>
+      </Col>
+      <Button type="info" ghost>Info</Button>
+    </Row>
+  </div>
 </template>
 
 <script>
