@@ -1,10 +1,3 @@
-const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES'
-    ? { router: {
-          base: '/<repository-name>/'
-        }
-      }
-    : {}
-
 const config = require('./firebase.config.js')
 
 import firebase from 'firebase/app'
@@ -12,7 +5,9 @@ import 'firebase/firestore'
 
 if (!firebase.apps.length) {
   firebase.initializeApp(config)
-  firebase.firestore().settings({timestampsInSnapshots: true})
+  firebase.firestore().settings({
+    timestampsInSnapshots: true
+  })
 }
 const db = firebase.firestore()
 
@@ -20,7 +15,9 @@ export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
     title: 'ViewTest',
-    ...routerBase,
+    router: {
+      base: '/<repository-name>/'
+    },
     htmlAttrs: {
       lang: 'en'
     },
